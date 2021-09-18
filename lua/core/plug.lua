@@ -71,7 +71,7 @@ require('packer').startup(function()
   })
   use({
     'neovim/nvim-lspconfig',
-    config = [[require('mode')().load()]],
+    config = [[require('mode').load()]],
   })
 
   use({
@@ -111,10 +111,6 @@ require('packer').startup(function()
   })
   use({
     'akinsho/flutter-tools.nvim',
-    ft = 'dart',
-    config = function()
-      require('flutter-tools').setup({}) -- use defaults
-    end,
   })
 
   use({

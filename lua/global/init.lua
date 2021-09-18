@@ -1,3 +1,5 @@
+--@Param scheme string
+--@Param scheme number
 _G.set_theme = function(scheme)
   if type(scheme) == 'number' then
     --FIXME:
