@@ -1,4 +1,4 @@
-local opt = vim.opt
+local opt, g = vim.opt, vim.g
 
 opt.clipboard = 'unnamedplus'
 opt.completeopt = { 'menuone', 'noinsert', 'noselect' }
@@ -28,3 +28,8 @@ opt.listchars = { tab = '>~', space = '⋅', eol = '↴' }
 opt.colorcolumn = '80'
 opt.cursorline = true
 opt.background = 'dark'
+g.transparent_background = false
+g.italic_comments = true
+g.italic_keywords = true
+g.italic_functions = true
+g.italic_variables = true

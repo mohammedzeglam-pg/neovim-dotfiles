@@ -13,6 +13,9 @@ local angular = require('mode.language.angular')
 local lua = require('mode.language.lua')
 local flutter = require('mode.language.flutter')
 local ts = require('mode.language.ts')
+local fsharp = require('mode.language.fsharp')
+local json = require('mode.language.json')
+local tailwind = require('mode.language.tailwind')
 local M = {
   angular,
   rust,
@@ -29,5 +32,8 @@ local M = {
   lua,
   flutter,
   ts,
+  fsharp,
+  json,
+  tailwind,
 }
 return M

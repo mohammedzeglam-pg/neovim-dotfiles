@@ -43,8 +43,12 @@ cmp.setup({
   },
   preselect = 'always',
   formatting = {
-    format = function(_, vim_item)
-      vim_item.kind = kind[vim_item.kind]
+    format = function(entry, vim_item)
+      if entry.source.name == 'cmp_tabnine' then
+        print(vim.inspect(entry.source.name))
+        print(vim_item.kind)
+      end
+      vim_item.kind = kind[vim_item.kind] or ''
       return vim_item
     end,
   },
@@ -101,5 +105,13 @@ cmp.setup({
     { name = 'vsnip' },
     { name = 'emoji' },
     { name = 'nvim_lua' },
+    { name = 'cmp_tabnine' },
+    { name = 'treesitter' },
   },
+})
+local tabnine = require('cmp_tabnine.config')
+tabnine:setup({
+  max_lines = 1000,
+  max_num_results = 20,
+  sort = true,
 })

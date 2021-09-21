@@ -5,14 +5,7 @@ M.on_attach = function(client, bufnr, dis_fmt)
   require('mode.keymap')(bufnr)
   M.inhancelsp()
   require('lsp_signature').on_attach({
-    bind = true,
-    use_lspsaga = true,
-    doc_lines = 5,
-    floating_window = true,
-    hint_enable = false,
-    handler_opts = { border = 'rounded' },
-    extra_trigger_chars = { '(', ',' },
-    fix_pos = 'single',
+    toggle_key = '<M-x>',
   }, bufnr)
   if dis_fmt == true or dis_fmt == nil then
     client.resolved_capabilities.document_formatting = false

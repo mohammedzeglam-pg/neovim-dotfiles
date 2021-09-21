@@ -59,10 +59,6 @@ require('packer').startup(function()
   })
 
   use({
-    'Julpikar/night-owl.nvim',
-  })
-
-  use({
     'johnpapa/vscode-angular-snippets',
   })
 
@@ -90,16 +86,6 @@ require('packer').startup(function()
   use({
     'terrortylor/nvim-comment',
     config = [[require('nvim_comment').setup()]],
-  })
-
-  use({
-    'folke/tokyonight.nvim',
-  })
-  use({
-    'ful1e5/onedark.nvim',
-  })
-  use({
-    'Yagua/nebulous.nvim',
   })
 
   use({
@@ -165,6 +151,8 @@ require('packer').startup(function()
       'hrsh7th/cmp-emoji',
       'L3MON4D3/LuaSnip',
       'saadparwaiz1/cmp_luasnip',
+      { 'tzachar/cmp-tabnine', run = './install.sh' },
+      'ray-x/cmp-treesitter',
     },
   })
 
@@ -202,28 +190,25 @@ require('packer').startup(function()
       require('wlsample.evil_line')
     end,
   })
-  use({ 'windwp/wind-colors' })
-  use({ 'yonlu/omni.vim' })
 
-  use({
-    'https://git.sr.ht/~novakane/kosmikoa.nvim',
-  })
-  use('savq/melange')
-  use('glepnir/zephyr-nvim')
-  use('matsuuu/pinkmare')
-
-  use('marko-cerovac/material.nvim')
+  -- use('~/dev/nvim/zephyr-nvim')
+  use({ 'mohammedzeglam-pg/casillias-nvim', require = 'nvim-treesitter/nvim-treesitter' })
   use({
     'norcalli/nvim-colorizer.lua',
     config = function()
       require('colorizer').setup({
-        'css',
-        'javascript',
-        'html',
+        '*',
       }, { mode = 'foreground' })
     end,
   })
 
-  use('eddyekofo94/gruvbox-flat.nvim')
-  use('EdenEast/nightfox.nvim')
+  use('PhilT/vim-fsharp')
+  use('adelarsq/neofsharp.vim')
+  use({
+    'akinsho/bufferline.nvim',
+    requires = 'kyazdani42/nvim-web-devicons',
+  })
+
+  use('NTBBloodbath/doom-one.nvim')
+  use('LunarVim/Colorschemes')
 end)

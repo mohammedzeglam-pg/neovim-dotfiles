@@ -16,6 +16,9 @@ M.keys = {
   { 'v', 'J', ":m '>+1<CR>gv=gv" },
   { 'n', '<c-t>', [[:exe v:count1 . "ToggleTerm"<CR>]] },
   { 'i', '<c-t>', [[<Esc>:exe v:count1 . "ToggleTerm"<CR>]] },
+  { 'n', '[b', ':BufferLineCycleNext<CR>' },
+  { 'n', 'b]', ':BufferLineCyclePrev<CR>' },
+  { 'n', 'bb', ':lua require("core.tabline") <CR>' },
 }
 
 M.add = function(tbl)
