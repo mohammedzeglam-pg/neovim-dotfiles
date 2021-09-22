@@ -28,8 +28,23 @@ opt.listchars = { tab = '>~', space = '⋅', eol = '↴' }
 opt.colorcolumn = '80'
 opt.cursorline = true
 opt.background = 'dark'
+-- ColorScheme
 g.transparent_background = false
 g.italic_comments = true
 g.italic_keywords = true
 g.italic_functions = true
 g.italic_variables = true
+
+-- x-ray
+vim.g.material_italic_comments = true
+vim.g.material_italic_string = false
+vim.g.material_italic_keywords = true
+vim.g.material_italic_functions = false
+vim.g.material_italic_variables = false
+vim.g.material_contrast = true
+vim.g.material_borders = false
+vim.g.material_disable_background = false
+vim.g.material_style_fix = true
+vim.g.material_darker_contrast = true
+vim.g.material_italic_keywords = false
+vim.g.material_italic_functions = false

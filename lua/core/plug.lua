@@ -211,4 +211,5 @@ require('packer').startup(function()
 
   use('NTBBloodbath/doom-one.nvim')
   use('LunarVim/Colorschemes')
+  use('ray-x/material_plus.nvim')
 end)
