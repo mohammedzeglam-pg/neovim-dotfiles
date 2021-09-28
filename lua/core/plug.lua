@@ -5,8 +5,11 @@ require('packer').startup(function()
   use({
     'kyazdani42/nvim-tree.lua',
     requires = 'kyazdani42/nvim-web-devicons',
-    config = [[require("core.tree")]],
+    config = function()
+      require("core.tree")
+    end,
   })
+
   use({
     'akinsho/nvim-toggleterm.lua',
     config = function()
@@ -131,9 +134,13 @@ require('packer').startup(function()
 
   use({
     'TimUntersberger/neogit',
-    requires = 'nvim-lua/plenary.nvim',
+    requires = { 'nvim-lua/plenary.nvim', 'sindrets/diffview.nvim' },
     config = function()
-      require('neogit').setup({})
+      require('neogit').setup({
+        integrations = {
+          diffview = true,
+        },
+      })
     end,
   })
 
@@ -198,7 +205,7 @@ require('packer').startup(function()
     config = function()
       require('colorizer').setup({
         '*',
-      }, { mode = 'foreground' })
+      }, { mode = 'background' })
     end,
   })
 

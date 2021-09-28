@@ -45,10 +45,10 @@ cmp.setup({
   formatting = {
     format = function(entry, vim_item)
       if entry.source.name == 'cmp_tabnine' then
-        print(vim.inspect(entry.source.name))
-        print(vim_item.kind)
+        vim_item.kind = ''
+      else
+        vim_item.kind = kind[vim_item.kind] or ''
       end
-      vim_item.kind = kind[vim_item.kind] or ''
       return vim_item
     end,
   },

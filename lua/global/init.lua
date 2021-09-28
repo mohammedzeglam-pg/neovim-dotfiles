@@ -2,8 +2,9 @@
 --@Param scheme number
 _G.set_theme = function(scheme)
   if type(scheme) == 'number' then
-    --FIXME:
+    --FIXME: vim.tbl_keys return with no order
     local schemes = vim.tbl_keys(require('core.colorscheme'))
+    print(schemes[scheme])
     scheme = schemes[scheme]
   end
   local theme = require('core.colorscheme')[scheme]

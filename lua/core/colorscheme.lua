@@ -81,8 +81,5 @@ local M = {
     vim.g.material_style = 'middlenight_blue'
     require('material').set()
   end,
-  themes = {
-    'middlenight_blue',
-  },
 }
 return M

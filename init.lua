@@ -1,3 +1,3 @@
 local core = require('core')
 core.default()
-set_theme('early')
+set_theme('onedarker')
