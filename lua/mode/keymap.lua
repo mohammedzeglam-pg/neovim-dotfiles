@@ -19,8 +19,8 @@ return function(bufnr)
     { 'v', 'ca', '<C-U>: lua vim.lsp.buf.range_code_action()<CR>' },
     { 'n', '<space>gr', ':Telescope lsp_references<CR>' },
     { 'n', 'cd', ':lua vim.lsp.diagnostic.show_line_diagnostics()<CR>' },
-    { 'n', '[e', ':lua vim.lsp.diagnostic.diagnosticjump_prev()<CR>' },
-    { 'n', ']e', ':lua vim.lsp.diagnostic.diagnosticjump_next()<CR>' },
+    { 'n', '[e', ':lua vim.lsp.diagnostic.diagnostic_jump_prev()<CR>' },
+    { 'n', ']e', ':lua vim.lsp.diagnostic.diagnostic_jump_next()<CR>' },
     { 'n', '<space>q', ':lua vim.lsp.diagnostic.set_loclist()<CR>' },
   }
   require('core').key().set_buf(bufnr, keys)

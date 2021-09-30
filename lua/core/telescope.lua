@@ -75,7 +75,7 @@ require('telescope').setup({
 })
 
 require('telescope').load_extension('dap')
-local key = require('core').key()
+local key = require('core').key
 local keys = {
   { 'n', '<leader>.', ':Telescope fd<cr>' },
   { 'n', '<leader><leader>', ':Telescope live_grep<cr>' },

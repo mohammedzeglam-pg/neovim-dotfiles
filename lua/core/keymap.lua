@@ -1,5 +1,4 @@
 local M = {}
-vim.g.mapleader = ' '
 
 M.keys = {
   { 'n', 'Y', 'y$' },
@@ -19,6 +18,7 @@ M.keys = {
   { 'n', '[b', ':BufferLineCycleNext<CR>' },
   { 'n', 'b]', ':BufferLineCyclePrev<CR>' },
   { 'n', 'bb', ':lua require("core.tabline") <CR>' },
+  { 'n', 'cs', ":lua require('util').change_str(vim.fn.expand('<cword>'))<CR>" },
 }
 
 M.add = function(tbl)

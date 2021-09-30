@@ -1,8 +1,9 @@
-local M = {}
+local key = require('core.keymap')
 
-M.key = function()
-  return require('core.keymap')
-end
+local M = {
+  key = key,
+}
+
 M.default = function()
   require('core.default')
   require('core.plug')
@@ -11,7 +12,7 @@ M.default = function()
   require('global')
   require('core.command')
   vim.schedule(function()
-    M.key().load()
+    M.key.load()
   end)
 end
 

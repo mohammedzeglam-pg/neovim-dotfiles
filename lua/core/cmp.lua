@@ -47,7 +47,7 @@ cmp.setup({
       if entry.source.name == 'cmp_tabnine' then
         vim_item.kind = ''
       else
-        vim_item.kind = kind[vim_item.kind] or ''
+        vim_item.kind = kind[vim_item.kind]
       end
       return vim_item
     end,
