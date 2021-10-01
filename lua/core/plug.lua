@@ -6,7 +6,7 @@ require('packer').startup(function()
     'kyazdani42/nvim-tree.lua',
     requires = 'kyazdani42/nvim-web-devicons',
     config = function()
-      require("core.tree")
+      require('core.tree')
     end,
   })
 
@@ -176,7 +176,7 @@ require('packer').startup(function()
       -- vim.cmd([[highlight IndentBlanklineIndent6 guifg=#C678DD blend=nocombine]])
 
       require('indent_blankline').setup({
-        buftype_exclude = { 'terminal', 'NvimTree', 'Telescope', 'packer' },
+        buftype_exclude = { 'terminal', 'NvimTree', 'Telescope', 'packer', 'dashboard' },
         show_end_of_line = true,
         space_char_blankline = ' ',
         show_current_context = true,
@@ -219,4 +219,28 @@ require('packer').startup(function()
   use('NTBBloodbath/doom-one.nvim')
   use('LunarVim/Colorschemes')
   use('ray-x/material_plus.nvim')
+  use({
+    'ahmedkhalf/project.nvim',
+    config = function()
+      vim.g.nvim_tree_respect_buf_cwd = 1
+      require('project_nvim').setup({
+        update_cwd = true,
+        update_focused_file = {
+          enable = true,
+          update_cwd = true,
+        },
+        -- your configuration comes here
+        -- or leave it empty to use the default settings
+        -- refer to the configuration section below
+      })
+
+      require('telescope').load_extension('projects')
+    end,
+  })
+  use({
+    'glepnir/dashboard-nvim',
+    config = function()
+      require('core.dashboard')
+    end,
+  })
 end)

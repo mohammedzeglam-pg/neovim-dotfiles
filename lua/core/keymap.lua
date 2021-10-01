@@ -19,6 +19,15 @@ M.keys = {
   { 'n', 'b]', ':BufferLineCyclePrev<CR>' },
   { 'n', 'bb', ':lua require("core.tabline") <CR>' },
   { 'n', 'cs', ":lua require('util').change_str(vim.fn.expand('<cword>'))<CR>" },
+  { 'n', '<Leader>ss', ':<C-u>SessionSave<CR>' },
+  { 'n', '<Leader>sl', ':<C-u>SessionLoad<CR>' },
+  { 'n', '<Leader>fh', ':DashboardFindHistory<CR>' },
+  { 'n', '<Leader>ff', ':DashboardFindFile<CR>' },
+  { 'n', '<Leader>tc', ':DashboardChangeColorscheme<CR>' },
+  { 'n', '<Leader>fa', ':DashboardFindWord<CR>' },
+  { 'n', '<Leader>fb', ':DashboardJumpMark<CR>' },
+  { 'n', '<Leader>cn', ':DashboardNewFile<CR>' },
+  { 'n', '<Leader>pp', ':Telescope projects<CR>' },
 }
 
 M.add = function(tbl)

@@ -1,3 +1,3 @@
 local core = require('core')
 core.default()
-set_theme('codemonkey')
+set_theme('doom')

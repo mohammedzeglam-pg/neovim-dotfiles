@@ -23,5 +23,5 @@ return function(bufnr)
     { 'n', ']e', ':lua vim.lsp.diagnostic.diagnostic_jump_next()<CR>' },
     { 'n', '<space>q', ':lua vim.lsp.diagnostic.set_loclist()<CR>' },
   }
-  require('core').key().set_buf(bufnr, keys)
+  require('core').key.set_buf(bufnr, keys)
 end
